@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Info - App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Movie Info - App</h1>
+        <input type="text" id="search-input" placeholder="Search movies..." oninput="filterMovies()">
+    </header>
+    <main>
+        <div id="movies-container" class="movies-container">
+            <!-- Movies will be injected here by JavaScript -->
+        </div>
+    </main>
+
+    <!-- Modal for movie details -->
+    <div id="movie-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal()">&times;</span>
+            <h2 id="modal-title"></h2> <!-- Movie title element -->
+            <img id="modal-image" alt="Movie Poster" />
+            <p id="modal-name" class="modal-name"></p> <!-- Movie name element -->
+            <p id="modal-year"></p>
+            <p id="modal-summary"></p>
+            <!-- Additional details can be added here -->
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
